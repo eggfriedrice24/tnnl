@@ -22,8 +22,22 @@ var peersCmd = &cobra.Command{
 			log.Fatal("Not logged in. Run 'efrc login' first")
 		}
 
-		// TODO: Fetch peers from server
-		fmt.Println("Peers: (not implemented yet)")
+		api := client.NewAPIClient(config.ServerURL, config.NetworkKey)
+		peers, err := api.GetPeers()
+		if err != nil {
+			log.Fatalf("Failed to get peers: %v", err)
+		}
+
+		if len(peers) == 0 {
+			fmt.Println("No peers found")
+			return
+		}
+
+		fmt.Printf("%-20s %-15s %-10s\n", "NAME", "VIRTUAL IP", "ONLINE")
+		fmt.Println("--------------------------------------------")
+		for _, p := range peers {
+			fmt.Printf("%-20s %-15s %-10v\n", p.Name, p.VirtualIP, p.Online)
+		}
 	},
 }
 
