@@ -7,8 +7,8 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "efrc",
-	Short: "Personal mesh VPN client",
+	Use:   "tnnl",
+	Short: "Personal mesh VPN client (t2l)",
 }
 
 func main() {

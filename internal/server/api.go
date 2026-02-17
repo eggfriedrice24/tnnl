@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"efrc/internal/protocol"
+	"github.com/eggfriedrice24/tnnl/internal/protocol"
 
 	"github.com/google/uuid"
 )

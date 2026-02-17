@@ -1,4 +1,4 @@
-module efrc
+module github.com/eggfriedrice24/tnnl
 
 go 1.23.5
 

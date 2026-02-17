@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"efrc/internal/protocol"
+	"github.com/eggfriedrice24/tnnl/internal/protocol"
 )
 
 type Store struct {

@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"os"
 
-	"efrc/internal/server"
+	"github.com/eggfriedrice24/tnnl/internal/server"
 
 	"github.com/spf13/cobra"
 )
@@ -17,8 +17,8 @@ var (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "efrc-server",
-	Short: "Control server for efrc mesh VPN",
+	Use:   "tnnl-server",
+	Short: "Control server for tnnl mesh VPN",
 	Run: func(cmd *cobra.Command, args []string) {
 		if networkKey == "" {
 			log.Fatal("--network-key is required")

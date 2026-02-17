@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"log"
 
-	"efrc/internal/client"
-	"efrc/internal/protocol"
+	"github.com/eggfriedrice24/tnnl/internal/client"
+	"github.com/eggfriedrice24/tnnl/internal/protocol"
 
 	"github.com/spf13/cobra"
 )
@@ -16,11 +16,11 @@ var registerCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		config, err := client.LoadConfig()
 		if err != nil {
-			log.Fatalf("No config found. Run 'efrc init' first: %v", err)
+			log.Fatalf("No config found. Run 'tnnl init' first: %v", err)
 		}
 
 		if config.ServerURL == "" {
-			log.Fatal("Not logged in. Run 'efrc login' first")
+			log.Fatal("Not logged in. Run 'tnnl login' first")
 		}
 
 		api := client.NewAPIClient(config.ServerURL, config.NetworkKey)

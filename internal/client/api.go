@@ -7,7 +7,7 @@ import (
 	"io"
 	"net/http"
 
-	"efrc/internal/protocol"
+	"github.com/eggfriedrice24/tnnl/internal/protocol"
 )
 
 type APIClient struct {

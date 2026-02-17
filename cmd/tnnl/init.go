@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"efrc/internal/client"
+	"github.com/eggfriedrice24/tnnl/internal/client"
 
 	"github.com/spf13/cobra"
 )
@@ -23,7 +23,7 @@ var initCmd = &cobra.Command{
 		fmt.Println("Device initialized!")
 		fmt.Printf("Name:       %s\n", config.DeviceName)
 		fmt.Printf("Public Key: %s\n", config.PublicKey)
-		fmt.Printf("Config:     ~/.efrc/config.json\n")
+		fmt.Printf("Config:     ~/.tnnl/config.json\n")
 	},
 }
 

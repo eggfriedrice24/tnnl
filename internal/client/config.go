@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"efrc/internal/wg"
+	"github.com/eggfriedrice24/tnnl/internal/wg"
 )
 
 type Config struct {
@@ -18,17 +18,17 @@ type Config struct {
 	VirtualIP  string `json:"virtual_ip"`
 }
 
-// ConfigDir returns ~/.efrc
+// ConfigDir returns ~/.tnnl
 func ConfigDir() (string, error) {
 	home, err := os.UserHomeDir()
 	if err != nil {
 		return "", err
 	}
 
-	return filepath.Join(home, ".efrc"), nil
+	return filepath.Join(home, ".tnnl"), nil
 }
 
-// ConfigPath returns ~/.efrc/config.json
+// ConfigPath returns ~/.tnnl/config.json
 func ConfigPath() (string, error) {
 	configDir, err := ConfigDir()
 	if err != nil {

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"efrc/internal/client"
+	"github.com/eggfriedrice24/tnnl/internal/client"
 
 	"github.com/spf13/cobra"
 )
@@ -18,7 +18,7 @@ var loginCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		config, err := client.LoadConfig()
 		if err != nil {
-			log.Fatalf("No config found. Run 'efrc init' first: %v", err)
+			log.Fatalf("No config found. Run 'tnnl init' first: %v", err)
 		}
 
 		config.NetworkKey = args[0]
